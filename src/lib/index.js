@@ -1,3 +1,3 @@
-import ItsWorking from './components/ItsWorking'
+import CardVerticalLine from './components/CardVerticalLine'
 
-export {ItsWorking}
+export {CardVerticalLine}

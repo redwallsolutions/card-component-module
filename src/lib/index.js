@@ -1,3 +1,4 @@
 import CardVerticalLine from './components/CardVerticalLine'
+import CardFloatHeader from './components/CardFloatHeader';
 
-export {CardVerticalLine}
+export {CardVerticalLine, CardFloatHeader}

@@ -5,7 +5,6 @@ import {CardVerticalLineWrapper, CardVerticalLineContent, CardVerticalLineTopAct
 
 export class CardVerticalLine extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
-    console.log(this.props.appearance);
     return (
       <React.Fragment>
         <GlobalStyle/>

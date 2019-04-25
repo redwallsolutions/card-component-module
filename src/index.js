@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from "react-dom";
 import {ThemeProvider}  from 'styled-components';
 import Color from 'color';
-import {CardVerticalLine} from './lib'
+import {CardVerticalLine, CardFloatHeader} from './lib'
 
 
 export default class App extends React.Component {
@@ -62,16 +62,31 @@ export default class App extends React.Component {
               <input type='radio' id='random' name='theme' onChange={e => this.randomizeATheme()}></input>
             </div>
           </div>
-          <CardVerticalLine appearance="primary" actions={
-            [
-            {
-              name: "Criar Entity",
-              event: () => (console.log('teste'))
-            }
-            ]
-          }>
-            Testando sabudega
-          </CardVerticalLine>
+          <div style={{width: "500px"}}>
+            <CardVerticalLine appearance="primary" actions={
+              [
+              {
+                name: "Criar Entity",
+                event: () => (console.log('teste'))
+              }
+              ]
+            }>
+              Muito bem, vamos lá
+            </CardVerticalLine>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <div style={{width: "500px"}}>
+            <CardFloatHeader appearance="primary" header={(
+              <div style={{padding: "2em"}}>
+                Está preparado ?
+              </div>
+            )}>
+              Muito bem, vamos lá
+            </CardFloatHeader>
+          </div>
+
         </React.Fragment>
       </ThemeProvider>
     );

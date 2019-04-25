@@ -3,6 +3,7 @@ import Poppins from './../assets/fonts/Poppins-Regular.ttf';
 import Color from 'color';
 import theming from 'styled-theming';
 
+// Config Style
 const defaultPrimaryLight = '#E20613'
 const defaultSecondaryLight = '#f8694f'
 const defaultDefaultLight = '#dfe0e2'
@@ -63,8 +64,7 @@ export const GlobalStyle = createGlobalStyle `
   }
 `
 
-export const primary = '#EF5350';
-export const primaryLight = 'rgba(238, 83, 80, 0.13)'
+// CardVerticalLineComponent
 
 export const CardVerticalLineWrapper = styled.div `
   font-family: Poppins, sans-serif;
@@ -156,3 +156,38 @@ export const CardVerticalLineContent = styled.div `
 
 CardVerticalLineWrapper.defaultProps = {appearance: 'primary'}
 CustomMenuStyles.defaultProps = {appearance: 'primary'}
+
+// CardFloatHeaderComponent
+
+export const CardFloatHeaderHeader = styled.div `
+  width: 100%;
+  top: 0;
+  border-radius: 4px;
+  margin-top: calc(-15% + 2rem);
+  transition: all 0.2s ease;
+  color: ${props => theme(props).contrast(props)};
+  background: ${props => (`linear-gradient(to right top, ${theme(props).color(props)},
+   ${Color(theme(props).color(props)).darken(0.1).string()},
+   ${Color(theme(props).color(props)).darken(0.2).string()},
+   ${Color(theme(props).color(props)).darken(0.3).string()},
+   ${Color(theme(props).color(props)).darken(0.4).string()})`)};
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);
+  position: relative;
+`;
+
+export const CardFloatHeaderWrapper = styled.div `
+  font-family: Poppins, sans-serif;
+  position: relative;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  background: ${props => Color(theme(props).contrast(props)).fade(0.7).string()};
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);
+  padding: 1em;
+  &:hover ${CardFloatHeaderHeader} {
+    transform: translate(0, -4%);
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+  }
+`;
+
+CardFloatHeaderWrapper.defaultProps = {appearance: 'primary'}
+CardFloatHeaderHeader.defaultProps = {appearance: 'primary'}

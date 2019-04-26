@@ -1,5 +1,4 @@
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
-import _objectSpread from "@babel/runtime/helpers/esm/objectSpread";
 
 function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n  font-family: Poppins, sans-serif;\n  position: relative;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  background: ", ";\n  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);\n  padding: 1em;\n  &:hover ", " {\n    transform: translate(0, -4%);\n    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);\n  }\n"]);
@@ -74,82 +73,8 @@ function _templateObject() {
 import styled, { createGlobalStyle } from 'styled-components';
 import Poppins from './../assets/fonts/Poppins-Regular.ttf';
 import Color from 'color';
-import theming from 'styled-theming'; // Config Style
-
-var defaultPrimaryLight = '#E20613';
-var defaultSecondaryLight = '#f8694f';
-var defaultDefaultLight = '#dfe0e2';
-var defaultPrimaryContrastLight = '#f9f9f9';
-var defaultSecondaryContrastLight = '#fff';
-var defaultDefaultLightContrast = '#2e3439';
-var defaultPrimaryDark = 'rgba(85, 95, 98, 1)';
-var defaultSecondaryDark = 'rgba(92, 59, 59, 1)';
-var defaultPrimaryContrastDark = '#fffaf9';
-var defaultSecondaryContrastDark = '#f7f0f0';
-var defaultTheme = {
-  theme: {
-    mode: 'light'
-  }
-};
-
-var defaultProps = _objectSpread({}, defaultTheme);
-
-var theme = theming.variants('mode', 'appearance', {
-  primary: {
-    light: {
-      color: function color(props) {
-        return props.theme.primary || defaultPrimaryLight;
-      },
-      contrast: function contrast(props) {
-        return props.theme.primaryContrast || defaultPrimaryContrastLight;
-      }
-    },
-    dark: {
-      color: function color(props) {
-        return props.theme.primaryDark || defaultPrimaryDark;
-      },
-      contrast: function contrast(props) {
-        return props.theme.primaryDarkContrast || defaultPrimaryContrastDark;
-      }
-    }
-  },
-  secondary: {
-    light: {
-      color: function color(props) {
-        return props.theme.secondary || defaultSecondaryLight;
-      },
-      contrast: function contrast(props) {
-        return props.theme.secondaryContrast || defaultSecondaryContrastLight;
-      }
-    },
-    dark: {
-      color: function color(props) {
-        return props.theme.secondaryDark || defaultSecondaryDark;
-      },
-      contrast: function contrast(props) {
-        return props.theme.secondaryDarkContrast || defaultSecondaryContrastDark;
-      }
-    }
-  },
-  default: {
-    light: {
-      color: function color(props) {
-        return props.theme.default || defaultDefaultLight;
-      },
-      contrast: function contrast(props) {
-        return props.theme.defaultContrast || defaultDefaultLightContrast;
-      }
-    },
-    dark: {
-      color: function color(props) {
-        return props.theme.defaultDark || Color(defaultDefaultLight).darken(0.1).string();
-      },
-      contrast: function contrast(props) {
-        return props.theme.defaultDarkContrast || props.theme.defaultDefaultLightContrast;
-      }
-    }
-  }
-});
+import Theming from 'theming-component-module';
+var theme = Theming.createThemeWithAppearance();
 export var GlobalStyle = createGlobalStyle(_templateObject(), Poppins); // CardVerticalLineComponent
 
 export var CardVerticalLineWrapper = styled.div(_templateObject2(), function (props) {

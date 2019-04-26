@@ -8,7 +8,7 @@ import {CardVerticalLine, CardFloatHeader} from './lib'
 export default class App extends React.Component {
 
   state = {
-    theme: {mode:'dark', primaryDarkContrast: '#2b324c', primaryDark: '#EBEBEB'}
+    theme: {mode:'dark', primaryContrastDark: '#2b324c', primaryDark: '#EBEBEB'}
   }
 
   onChangeTheme = (input) => {

@@ -1,60 +1,9 @@
 import styled, {createGlobalStyle} from 'styled-components'
 import Poppins from './../assets/fonts/Poppins-Regular.ttf';
 import Color from 'color';
-import theming from 'styled-theming';
+import Theming from 'theming-component-module';
 
-// Config Style
-const defaultPrimaryLight = '#E20613'
-const defaultSecondaryLight = '#f8694f'
-const defaultDefaultLight = '#dfe0e2'
-const defaultPrimaryContrastLight = '#f9f9f9'
-const defaultSecondaryContrastLight = '#fff'
-const defaultDefaultLightContrast = '#2e3439'
-const defaultPrimaryDark = 'rgba(85, 95, 98, 1)'
-const defaultSecondaryDark = 'rgba(92, 59, 59, 1)'
-const defaultPrimaryContrastDark = '#fffaf9'
-const defaultSecondaryContrastDark = '#f7f0f0'
-
-const defaultTheme = {
-  theme: {
-    mode: 'light'
-  }
-}
-
-const defaultProps = {...defaultTheme}
-
-const theme = theming.variants('mode', 'appearance', {
-  primary: {
-    light: {
-      color: props => props.theme.primary || defaultPrimaryLight,
-      contrast: props => props.theme.primaryContrast || defaultPrimaryContrastLight
-    },
-    dark: {
-      color: props => props.theme.primaryDark || defaultPrimaryDark,
-      contrast: props => props.theme.primaryDarkContrast || defaultPrimaryContrastDark
-    }
-  },
-  secondary: {
-    light: {
-      color: props => props.theme.secondary || defaultSecondaryLight,
-      contrast: props => props.theme.secondaryContrast || defaultSecondaryContrastLight
-    },
-    dark: {
-      color: props => props.theme.secondaryDark || defaultSecondaryDark,
-      contrast: props => props.theme.secondaryDarkContrast || defaultSecondaryContrastDark
-    }
-  },
-  default: {
-    light: {
-      color: props => props.theme.default || defaultDefaultLight,
-      contrast: props => props.theme.defaultContrast || defaultDefaultLightContrast
-    },
-    dark: {
-      color: props => props.theme.defaultDark || Color(defaultDefaultLight).darken(0.1).string(),
-      contrast: props => props.theme.defaultDarkContrast || props.theme.defaultDefaultLightContrast
-    }
-  }
-})
+const theme = Theming.createThemeWithAppearance();
 
 export const GlobalStyle = createGlobalStyle `
   @font-face {

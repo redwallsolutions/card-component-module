@@ -72,6 +72,7 @@ export const CardVerticalLineWrapper = styled.div `
   transition: all 0.2s ease;
   border-radius: 5px;
   background: ${props => theme(props).contrast(props)};
+  color: ${props => theme(props).color(props)};
   box-shadow: 0 10px 25px -2px rgba(0,0,0,0.1);
   padding-left: 0.9em;
   margin-bottom: 10px;
@@ -118,6 +119,7 @@ export const CustomMenuStyles = createGlobalStyle`
     color:  ${props => theme(props).contrast(props)};
     &:hover {
       color:  ${props => theme(props).color(props)};
+      background: ${props => theme(props).contrast(props)};
     }
   }
 
@@ -131,8 +133,8 @@ export const CustomMenuStyles = createGlobalStyle`
     padding: 0 8px !important;
   }
 
-  .rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title {
-    background-color: rgb(231, 233, 238) !important;
+  .rc-menu-submenu-active > .rc-menu-submenu-title {
+    background-color: ${props => Color(theme(props).contrast(props)).darken(0.1).string()} !important;
   }
 
   .rc-menu-sub {
@@ -165,12 +167,12 @@ export const CardFloatHeaderHeader = styled.div `
   border-radius: 4px;
   margin-top: calc(-15% + 2rem);
   transition: all 0.2s ease;
-  color: ${props => theme(props).contrast(props)};
-  background: ${props => (`linear-gradient(to right top, ${theme(props).color(props)},
-   ${Color(theme(props).color(props)).darken(0.1).string()},
-   ${Color(theme(props).color(props)).darken(0.2).string()},
-   ${Color(theme(props).color(props)).darken(0.3).string()},
-   ${Color(theme(props).color(props)).darken(0.4).string()})`)};
+  color: ${props => theme(props).color(props)};
+  background: ${props => (`linear-gradient(to right top, ${theme(props).contrast(props)},
+   ${Color(theme(props).contrast(props)).darken(0.1).string()},
+   ${Color(theme(props).contrast(props)).darken(0.2).string()},
+   ${Color(theme(props).contrast(props)).darken(0.3).string()},
+   ${Color(theme(props).contrast(props)).darken(0.4).string()})`)};
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);
   position: relative;
 `;
@@ -180,7 +182,7 @@ export const CardFloatHeaderWrapper = styled.div `
   position: relative;
   transition: all 0.2s ease;
   border-radius: 5px;
-  background: ${props => Color(theme(props).contrast(props)).fade(0.7).string()};
+  background: ${props => Color(theme(props).color(props)).fade(0.7).string()};
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);
   padding: 1em;
   &:hover ${CardFloatHeaderHeader} {

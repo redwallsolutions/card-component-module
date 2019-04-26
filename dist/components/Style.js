@@ -32,7 +32,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n\n  .rc-menu-root {\n    width: auto;\n    padding: 0 !important;\n    border: none !important;\n    cursor: pointer !important;\n    box-shadow: none !important;\n    background: ", ";\n    color:  ", ";\n    &:hover {\n      color:  ", ";\n    }\n  }\n\n  .rc-menu-submenu-arrow::before {\n    content: \"\" !important;\n  }\n\n  .rc-menu-submenu-title {\n    transition: background-color .3s;\n    border-radius: 3px !important;\n    padding: 0 8px !important;\n  }\n\n  .rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title {\n    background-color: rgb(231, 233, 238) !important;\n  }\n\n  .rc-menu-sub {\n    display:flex;\n    justify-content: center;\n    padding: 0px !important;\n    transform-origin: right top !important;\n  }\n\n  .rc-menu-item {\n    padding: 4px 8px !important;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  .rc-menu-root {\n    width: auto;\n    padding: 0 !important;\n    border: none !important;\n    cursor: pointer !important;\n    box-shadow: none !important;\n    background: ", ";\n    color:  ", ";\n    &:hover {\n      color:  ", ";\n      background: ", ";\n    }\n  }\n\n  .rc-menu-submenu-arrow::before {\n    content: \"\" !important;\n  }\n\n  .rc-menu-submenu-title {\n    transition: background-color .3s;\n    border-radius: 3px !important;\n    padding: 0 8px !important;\n  }\n\n  .rc-menu-submenu-active > .rc-menu-submenu-title {\n    background-color: ", " !important;\n  }\n\n  .rc-menu-sub {\n    display:flex;\n    justify-content: center;\n    padding: 0px !important;\n    transform-origin: right top !important;\n  }\n\n  .rc-menu-item {\n    padding: 4px 8px !important;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-family: Poppins, sans-serif;\n  position: relative;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  background: ", ";\n  box-shadow: 0 10px 25px -2px rgba(0,0,0,0.1);\n  padding-left: 0.9em;\n  margin-bottom: 10px;\n  &:after {\n    transition: all 0.2s ease;\n    ", ";\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 7px;\n    height: 100%;\n    background: ", ";\n    border-top-left-radius: 5px;\n    border-bottom-left-radius: 5px;\n  }\n  &:hover {\n    &:after {\n      width: 10px;\n      opacity: 0.9\n    }\n  }\n  &:active,&:hover {\n    box-shadow: 0 10px 25px -2px rgba(0,0,0,0.15);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: Poppins, sans-serif;\n  position: relative;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  background: ", ";\n  color: ", ";\n  box-shadow: 0 10px 25px -2px rgba(0,0,0,0.1);\n  padding-left: 0.9em;\n  margin-bottom: 10px;\n  &:after {\n    transition: all 0.2s ease;\n    ", ";\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 7px;\n    height: 100%;\n    background: ", ";\n    border-top-left-radius: 5px;\n    border-bottom-left-radius: 5px;\n  }\n  &:hover {\n    &:after {\n      width: 10px;\n      opacity: 0.9\n    }\n  }\n  &:active,&:hover {\n    box-shadow: 0 10px 25px -2px rgba(0,0,0,0.15);\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -155,6 +155,8 @@ export var GlobalStyle = createGlobalStyle(_templateObject(), Poppins); // CardV
 export var CardVerticalLineWrapper = styled.div(_templateObject2(), function (props) {
   return theme(props).contrast(props);
 }, function (props) {
+  return theme(props).color(props);
+}, function (props) {
   return props.isFull ? '' : 'content: ""';
 }, function (props) {
   return theme(props).color(props);
@@ -166,6 +168,10 @@ export var CustomMenuStyles = createGlobalStyle(_templateObject4(), function (pr
   return theme(props).contrast(props);
 }, function (props) {
   return theme(props).color(props);
+}, function (props) {
+  return theme(props).contrast(props);
+}, function (props) {
+  return Color(theme(props).contrast(props)).darken(0.1).string();
 });
 export var CardVerticalLineContent = styled.div(_templateObject5());
 CardVerticalLineWrapper.defaultProps = {
@@ -176,12 +182,12 @@ CustomMenuStyles.defaultProps = {
 
 };
 export var CardFloatHeaderHeader = styled.div(_templateObject6(), function (props) {
-  return theme(props).contrast(props);
+  return theme(props).color(props);
 }, function (props) {
-  return "linear-gradient(to right top, ".concat(theme(props).color(props), ",\n   ").concat(Color(theme(props).color(props)).darken(0.1).string(), ",\n   ").concat(Color(theme(props).color(props)).darken(0.2).string(), ",\n   ").concat(Color(theme(props).color(props)).darken(0.3).string(), ",\n   ").concat(Color(theme(props).color(props)).darken(0.4).string(), ")");
+  return "linear-gradient(to right top, ".concat(theme(props).contrast(props), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.1).string(), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.2).string(), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.3).string(), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.4).string(), ")");
 });
 export var CardFloatHeaderWrapper = styled.div(_templateObject7(), function (props) {
-  return Color(theme(props).contrast(props)).fade(0.7).string();
+  return Color(theme(props).color(props)).fade(0.7).string();
 }, CardFloatHeaderHeader);
 CardFloatHeaderWrapper.defaultProps = {
   appearance: 'primary'

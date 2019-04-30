@@ -6,6 +6,7 @@ import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component, PropTypes } from 'react';
 import Menu, { SubMenu, Item } from 'rc-menu';
 import 'rc-menu/assets/index.css';
+import { MdMoreHoriz } from 'react-icons/md';
 import { CardVerticalLineWrapper, CardVerticalLineContent, CardVerticalLineTopActions, CustomMenuStyles, GlobalStyle } from './Style';
 export var CardVerticalLine =
 /*#__PURE__*/
@@ -25,11 +26,13 @@ function (_Component) {
       return React.createElement(React.Fragment, null, React.createElement(GlobalStyle, null), React.createElement(CardVerticalLineWrapper, {
         appearance: this.props.appearance
       }, this.props.actions ? React.createElement(CardVerticalLineTopActions, null, React.createElement(Menu, {
-        mode: "vertical-left",
+        mode: "vertical-right",
         triggerSubMenuAction: "click",
         openAnimation: "zoom"
       }, React.createElement(SubMenu, {
-        title: '...',
+        title: React.createElement(MdMoreHoriz, {
+          size: "1.5em"
+        }),
         key: "1"
       }, this.props.actions.map(function (action, index) {
         return React.createElement(Item, {

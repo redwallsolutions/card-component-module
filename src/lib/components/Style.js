@@ -11,6 +11,10 @@ export const GlobalStyle = createGlobalStyle `
     src: ${Poppins}, format("TrueType");
     font-display: fallback;
   }
+
+  .card-component-module * {
+    font-family: Poppins, cursive;
+  }
 `
 
 // CardVerticalLineComponent
@@ -57,47 +61,61 @@ export const CardVerticalLineTopActions = styled.div `
 `
 
 export const CustomMenuStyles = createGlobalStyle`
-
   .rc-menu-root {
-    width: auto;
     padding: 0 !important;
-    border: none !important;
+    margin: 0 !important;
     cursor: pointer !important;
     box-shadow: none !important;
-    background: ${props => theme(props).color(props)};
-    color:  ${props => theme(props).contrast(props)};
-    &:hover {
-      color:  ${props => theme(props).color(props)};
-      background: ${props => theme(props).contrast(props)};
-    }
+    border: none !important;
+    background: none !important;
+  }
+
+  .rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title {
+    background: none !important;
+  }
+
+  .rc-menu-item-active {
+    background: ${props => theme(props).color} !important;
+    color: ${props => theme(props).contrast} !important;
+  }
+
+  .rc-menu-submenu-selected {
+    background: none !important;
+  }
+
+  .rc-menu-submenu-title {
+    background: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: background-color .3s;
+    border-radius: 3px !important;
+    color: ${props => Color(theme(props).color(props)).grayscale().lighten(0.3).string()}
+  }
+
+  .rc-menu-sub {
+    transform-origin: right top !important;
+    font-family: Poppins, cursive;
+    width: 100% !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1)!important;
+    background: ${props => Color(theme(props).contrast(props)).lighten(0.3).string()} !important;
+    color: ${props => theme(props).color} !important;
   }
 
   .rc-menu-submenu-arrow::before {
     content: "" !important;
   }
 
-  .rc-menu-submenu-title {
-    transition: background-color .3s;
-    border-radius: 3px !important;
-    padding: 0 8px !important;
+  li.rc-menu-item {
+   cursor: pointer !important;
+   width: auto !important;
+   transition: background-color .3s;
+   border: none !important;
+   padding: 8px !important;
+   text-align: center;
+   border-radius: 2px !important;
   }
-
-  .rc-menu-submenu-active > .rc-menu-submenu-title {
-    background-color: ${props => Color(theme(props).contrast(props)).darken(0.1).string()} !important;
-  }
-
-  .rc-menu-sub {
-    display:flex;
-    justify-content: center;
-    padding: 0px !important;
-    transform-origin: right top !important;
-  }
-
-  .rc-menu-item {
-    padding: 4px 8px !important;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
+  li.rc-menu-item-selected {
+    background: ${props => Color(theme(props).color(props)).fade(.9).string()}
   }
 `
 
@@ -117,11 +135,8 @@ export const CardFloatHeaderHeader = styled.div `
   margin-top: calc(-15% + 2rem);
   transition: all 0.2s ease;
   color: ${props => theme(props).color(props)};
-  background: ${props => (`linear-gradient(to right top, ${theme(props).contrast(props)},
-   ${Color(theme(props).contrast(props)).darken(0.1).string()},
-   ${Color(theme(props).contrast(props)).darken(0.2).string()},
-   ${Color(theme(props).contrast(props)).darken(0.3).string()},
-   ${Color(theme(props).contrast(props)).darken(0.4).string()})`)};
+  ${props => console.log(theme(props).contrast(props),Color(theme(props).contrast(props)).darken(0.1).string())};
+  background: ${props => (`linear-gradient(45deg, ${Color(theme(props).contrast(props)).lighten(0.3).string()},${theme(props).contrast(props)})`)};
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);
   position: relative;
 `;
@@ -135,7 +150,7 @@ export const CardFloatHeaderWrapper = styled.div `
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);
   padding: 1em;
   &:hover ${CardFloatHeaderHeader} {
-    transform: translate(0, -4%);
+    transform: translate(0, -1%);
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
   }
 `;

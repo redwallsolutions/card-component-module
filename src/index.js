@@ -8,7 +8,7 @@ import {CardVerticalLine, CardFloatHeader} from './lib'
 export default class App extends React.Component {
 
   state = {
-    theme: {mode:'dark', primaryContrastDark: '#2b324c', primaryDark: '#EBEBEB'}
+    theme: {mode:'dark'}
   }
 
   onChangeTheme = (input) => {
@@ -46,7 +46,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <ThemeProvider theme={this.state.theme}>
+      <ThemeProvider theme={{...this.state.theme, primaryContrastDark: '#2b324c', primaryDark: '#EBEBEB'}}>
         <React.Fragment>
           <div style={{display:'flex', justifyContent: 'space-around', flexWrap: 'wrap', margin: '2em'}}>
             <div>
@@ -78,7 +78,7 @@ export default class App extends React.Component {
           <br/>
           <br/>
           <div style={{width: "500px"}}>
-            <CardFloatHeader appearance="primary" header={(
+            <CardFloatHeader header={(
               <div style={{padding: "2em"}}>
                 Está preparado ?
               </div>

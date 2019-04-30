@@ -5,6 +5,7 @@ import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component, PropTypes } from 'react';
 import { CardFloatHeaderWrapper, CardFloatHeaderHeader } from './Style';
+import { MdMoreHoriz } from 'react-icons/md';
 import Menu, { SubMenu, Item } from 'rc-menu';
 export var CardFloatHeader =
 /*#__PURE__*/
@@ -29,7 +30,7 @@ function (_Component) {
         triggerSubMenuAction: "click",
         openAnimation: "zoom"
       }, React.createElement(SubMenu, {
-        title: '...',
+        title: React.createElement(MdMoreHoriz, null),
         key: "1"
       }, this.props.actions.map(function (action, index) {
         return React.createElement(Item, {

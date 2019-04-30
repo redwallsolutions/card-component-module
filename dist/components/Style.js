@@ -1,7 +1,7 @@
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-family: Poppins, sans-serif;\n  position: relative;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  background: ", ";\n  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);\n  padding: 1em;\n  &:hover ", " {\n    transform: translate(0, -4%);\n    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-family: Poppins, sans-serif;\n  position: relative;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  background: ", ";\n  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);\n  padding: 1em;\n  &:hover ", " {\n    transform: translate(0, -1%);\n    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -11,7 +11,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  top: 0;\n  border-radius: 4px;\n  margin-top: calc(-15% + 2rem);\n  transition: all 0.2s ease;\n  color: ", ";\n  background: ", ";\n  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);\n  position: relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  top: 0;\n  border-radius: 4px;\n  margin-top: calc(-15% + 2rem);\n  transition: all 0.2s ease;\n  color: ", ";\n  ", ";\n  background: ", ";\n  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);\n  position: relative;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -31,7 +31,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n\n  .rc-menu-root {\n    width: auto;\n    padding: 0 !important;\n    border: none !important;\n    cursor: pointer !important;\n    box-shadow: none !important;\n    background: ", ";\n    color:  ", ";\n    &:hover {\n      color:  ", ";\n      background: ", ";\n    }\n  }\n\n  .rc-menu-submenu-arrow::before {\n    content: \"\" !important;\n  }\n\n  .rc-menu-submenu-title {\n    transition: background-color .3s;\n    border-radius: 3px !important;\n    padding: 0 8px !important;\n  }\n\n  .rc-menu-submenu-active > .rc-menu-submenu-title {\n    background-color: ", " !important;\n  }\n\n  .rc-menu-sub {\n    display:flex;\n    justify-content: center;\n    padding: 0px !important;\n    transform-origin: right top !important;\n  }\n\n  .rc-menu-item {\n    padding: 4px 8px !important;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .rc-menu-root {\n    padding: 0 !important;\n    margin: 0 !important;\n    cursor: pointer !important;\n    box-shadow: none !important;\n    border: none !important;\n    background: none !important;\n  }\n\n  .rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title {\n    background: none !important;\n  }\n\n  .rc-menu-item-active {\n    background: ", " !important;\n    color: ", " !important;\n  }\n\n  .rc-menu-submenu-selected {\n    background: none !important;\n  }\n\n  .rc-menu-submenu-title {\n    background: none;\n    padding: 0 !important;\n    margin: 0 !important;\n    transition: background-color .3s;\n    border-radius: 3px !important;\n    color: ", "\n  }\n\n  .rc-menu-sub {\n    transform-origin: right top !important;\n    font-family: Poppins, cursive;\n    width: 100% !important;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1)!important;\n    background: ", " !important;\n    color: ", " !important;\n  }\n\n  .rc-menu-submenu-arrow::before {\n    content: \"\" !important;\n  }\n\n  li.rc-menu-item {\n   cursor: pointer !important;\n   width: auto !important;\n   transition: background-color .3s;\n   border: none !important;\n   padding: 8px !important;\n   text-align: center;\n   border-radius: 2px !important;\n  }\n  li.rc-menu-item-selected {\n    background: ", "\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -61,7 +61,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @font-face {\n    font-family: Poppins;\n    src: ", ", format(\"TrueType\");\n    font-display: fallback;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  @font-face {\n    font-family: Poppins;\n    src: ", ", format(\"TrueType\");\n    font-display: fallback;\n  }\n\n  .card-component-module * {\n    font-family: Poppins, cursive;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -88,15 +88,17 @@ export var CardVerticalLineWrapper = styled.div(_templateObject2(), function (pr
 });
 export var CardVerticalLineTopActions = styled.div(_templateObject3());
 export var CustomMenuStyles = createGlobalStyle(_templateObject4(), function (props) {
-  return theme(props).color(props);
+  return theme(props).color;
 }, function (props) {
-  return theme(props).contrast(props);
+  return theme(props).contrast;
 }, function (props) {
-  return theme(props).color(props);
+  return Color(theme(props).color(props)).grayscale().lighten(0.3).string();
 }, function (props) {
-  return theme(props).contrast(props);
+  return Color(theme(props).contrast(props)).lighten(0.3).string();
 }, function (props) {
-  return Color(theme(props).contrast(props)).darken(0.1).string();
+  return theme(props).color;
+}, function (props) {
+  return Color(theme(props).color(props)).fade(.9).string();
 });
 export var CardVerticalLineContent = styled.div(_templateObject5());
 CardVerticalLineWrapper.defaultProps = {
@@ -109,7 +111,9 @@ CustomMenuStyles.defaultProps = {
 export var CardFloatHeaderHeader = styled.div(_templateObject6(), function (props) {
   return theme(props).color(props);
 }, function (props) {
-  return "linear-gradient(to right top, ".concat(theme(props).contrast(props), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.1).string(), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.2).string(), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.3).string(), ",\n   ").concat(Color(theme(props).contrast(props)).darken(0.4).string(), ")");
+  return console.log(theme(props).contrast(props), Color(theme(props).contrast(props)).darken(0.1).string());
+}, function (props) {
+  return "linear-gradient(45deg, ".concat(Color(theme(props).contrast(props)).lighten(0.3).string(), ",").concat(theme(props).contrast(props), ")");
 });
 export var CardFloatHeaderWrapper = styled.div(_templateObject7(), function (props) {
   return Color(theme(props).color(props)).fade(0.7).string();

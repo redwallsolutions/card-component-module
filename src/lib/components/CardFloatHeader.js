@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {CardFloatHeaderWrapper, CardFloatHeaderHeader} from './Style';
 import { MdMoreHoriz } from 'react-icons/md';
 import Menu, { SubMenu, Item } from 'rc-menu';
@@ -6,7 +6,7 @@ import Menu, { SubMenu, Item } from 'rc-menu';
 export class CardFloatHeader extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className='card-component-module'>
         <CardFloatHeaderWrapper appearance={this.props.appearance}>
           <CardFloatHeaderHeader appearance={this.props.appearance}>
             {this.props.header}
@@ -30,7 +30,7 @@ export class CardFloatHeader extends Component {
           }
 
         </CardFloatHeaderWrapper>
-      </React.Fragment>
+      </div>
     );
   }
 }

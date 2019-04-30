@@ -3,7 +3,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Menu, { SubMenu, Item } from 'rc-menu';
 import 'rc-menu/assets/index.css';
 import { MdMoreHoriz } from 'react-icons/md';
@@ -23,7 +23,9 @@ function (_Component) {
     key: "render",
     // eslint-disable-line react/prefer-stateless-function
     value: function render() {
-      return React.createElement(React.Fragment, null, React.createElement(GlobalStyle, null), React.createElement(CardVerticalLineWrapper, {
+      return React.createElement("div", {
+        className: "card-component-module"
+      }, React.createElement(GlobalStyle, null), React.createElement(CardVerticalLineWrapper, {
         appearance: this.props.appearance
       }, this.props.actions ? React.createElement(CardVerticalLineTopActions, null, React.createElement(Menu, {
         mode: "vertical-right",

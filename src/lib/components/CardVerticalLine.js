@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Menu, { SubMenu, Item } from 'rc-menu';
 import 'rc-menu/assets/index.css';
 import { MdMoreHoriz } from 'react-icons/md';
@@ -7,7 +7,7 @@ import {CardVerticalLineWrapper, CardVerticalLineContent, CardVerticalLineTopAct
 export class CardVerticalLine extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <React.Fragment>
+      <div className='card-component-module'>
         <GlobalStyle/>
         <CardVerticalLineWrapper appearance={this.props.appearance}>
           {this.props.actions ? (
@@ -30,7 +30,7 @@ export class CardVerticalLine extends Component { // eslint-disable-line react/p
             {this.props.children}
           </CardVerticalLineContent>
         </CardVerticalLineWrapper>
-      </React.Fragment>
+      </div>
     );
   }
 }

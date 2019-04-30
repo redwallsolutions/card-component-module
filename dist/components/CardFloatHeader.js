@@ -3,7 +3,7 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { CardFloatHeaderWrapper, CardFloatHeaderHeader } from './Style';
 import { MdMoreHoriz } from 'react-icons/md';
 import Menu, { SubMenu, Item } from 'rc-menu';
@@ -21,7 +21,9 @@ function (_Component) {
   _createClass(CardFloatHeader, [{
     key: "render",
     value: function render() {
-      return React.createElement(React.Fragment, null, React.createElement(CardFloatHeaderWrapper, {
+      return React.createElement("div", {
+        className: "card-component-module"
+      }, React.createElement(CardFloatHeaderWrapper, {
         appearance: this.props.appearance
       }, React.createElement(CardFloatHeaderHeader, {
         appearance: this.props.appearance

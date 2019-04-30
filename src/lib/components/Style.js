@@ -20,7 +20,6 @@ export const GlobalStyle = createGlobalStyle `
 // CardVerticalLineComponent
 
 export const CardVerticalLineWrapper = styled.div `
-  font-family: Poppins, sans-serif;
   position: relative;
   transition: all 0.2s ease;
   border-radius: 5px;
@@ -94,7 +93,6 @@ export const CustomMenuStyles = createGlobalStyle`
 
   .rc-menu-sub {
     transform-origin: right top !important;
-    font-family: Poppins, cursive;
     width: 100% !important;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1)!important;
     background: ${props => Color(theme(props).contrast(props)).lighten(0.3).string()} !important;
@@ -106,6 +104,7 @@ export const CustomMenuStyles = createGlobalStyle`
   }
 
   li.rc-menu-item {
+  font-family: Poppins, cursive;
    cursor: pointer !important;
    width: auto !important;
    transition: background-color .3s;
@@ -141,7 +140,6 @@ export const CardFloatHeaderHeader = styled.div `
 `;
 
 export const CardFloatHeaderWrapper = styled.div `
-  font-family: Poppins, sans-serif;
   position: relative;
   transition: all 0.2s ease;
   border-radius: 5px;

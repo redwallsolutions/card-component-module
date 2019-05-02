@@ -4,7 +4,7 @@ import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConst
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import React, { Component } from 'react';
-import { CardFloatHeaderWrapper, CardFloatHeaderHeader } from './Style';
+import { CardFloatHeaderWrapper, CardFloatHeaderHeader, CardFloatHeaderContent } from './Style';
 import { MdMoreHoriz } from 'react-icons/md';
 import Menu, { SubMenu, Item } from 'rc-menu';
 export var CardFloatHeader =
@@ -27,19 +27,7 @@ function (_Component) {
         appearance: this.props.appearance
       }, React.createElement(CardFloatHeaderHeader, {
         appearance: this.props.appearance
-      }, this.props.header), this.props.children, this.props.actions ? React.createElement(Menu, {
-        mode: "vertical-left",
-        triggerSubMenuAction: "click",
-        openAnimation: "zoom"
-      }, React.createElement(SubMenu, {
-        title: React.createElement(MdMoreHoriz, null),
-        key: "1"
-      }, this.props.actions.map(function (action, index) {
-        return React.createElement(Item, {
-          onClick: action.event,
-          key: index
-        }, action.name);
-      }))) : null));
+      }, this.props.header), React.createElement(CardFloatHeaderContent, null, this.props.children)));
     }
   }]);
 

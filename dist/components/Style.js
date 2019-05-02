@@ -1,5 +1,15 @@
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  padding: 2px;\n  margin: 0;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  transition: all 0.2s ease;\n  border-radius: 5px;\n  background: ", ";\n  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);\n  padding: 1em;\n  &:hover ", " {\n    transform: translate(0, -1%);\n    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);\n  }\n"]);
 
@@ -11,7 +21,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  top: 0;\n  border-radius: 4px;\n  margin-top: calc(-15% + 2rem);\n  transition: all 0.2s ease;\n  color: ", ";\n  background: ", ";\n  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);\n  position: relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 94%;\n  top: -15%;\n  left: 3%;\n  border-radius: 4px;\n  transition: all 0.2s ease;\n  color: ", ";\n  background: ", ";\n  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);\n  position: absolute;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -116,6 +126,7 @@ export var CardFloatHeaderHeader = styled.div(_templateObject6(), function (prop
 export var CardFloatHeaderWrapper = styled.div(_templateObject7(), function (props) {
   return Color(theme(props).contrast(props)).string();
 }, CardFloatHeaderHeader);
+export var CardFloatHeaderContent = styled.div(_templateObject8());
 CardFloatHeaderWrapper.defaultProps = {
   appearance: 'primary'
 };

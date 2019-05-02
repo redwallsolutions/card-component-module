@@ -128,15 +128,15 @@ CustomMenuStyles.defaultProps = {appearance: 'primary'}
 // CardFloatHeaderComponent
 
 export const CardFloatHeaderHeader = styled.div `
-  width: 100%;
-  top: 0;
+  width: 94%;
+  top: -15%;
+  left: 3%;
   border-radius: 4px;
-  margin-top: calc(-15% + 2rem);
   transition: all 0.2s ease;
   color: ${props => theme(props).contrast(props)};
   background: ${props => (`linear-gradient(45deg, ${Color(theme(props).color(props)).lighten(0.5).string()},${theme(props).color(props)})`)};
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .12), 0 4px 25px 0 rgba(0, 0, 0, .2), 0 8px 10px -5px rgba(0, 0, 0, .08);
-  position: relative;
+  position: absolute;
 `;
 
 export const CardFloatHeaderWrapper = styled.div `
@@ -151,6 +151,11 @@ export const CardFloatHeaderWrapper = styled.div `
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
   }
 `;
+
+export const CardFloatHeaderContent = styled.div`
+  padding: 2px;
+  margin: 0;
+`
 
 CardFloatHeaderWrapper.defaultProps = {appearance: 'primary'}
 CardFloatHeaderHeader.defaultProps = {appearance: 'primary'}

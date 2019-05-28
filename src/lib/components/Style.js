@@ -1,19 +1,12 @@
 import styled, {createGlobalStyle} from 'styled-components'
-import Poppins from './../assets/fonts/Poppins-Regular.ttf';
 import Color from 'color';
 import Theming from 'theming-component-module';
 
 const theme = Theming.createThemeWithAppearance();
 
 export const GlobalStyle = createGlobalStyle `
-  @font-face {
-    font-family: Poppins;
-    src: ${Poppins}, format("TrueType");
-    font-display: fallback;
-  }
-
-  .card-component-module * {
-    font-family: Poppins, cursive;
+  .card-component-module {
+    font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif; 
   }
 `
 

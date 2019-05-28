@@ -83,21 +83,9 @@ export default class App extends React.Component {
                 Está preparado ?
               </div>
             )}>
-              Muito bem, vamos lá
-              Lorem
-              Lorem
-              Lorem
-              DUSHUDSUDS
-              hUDSIHuIHSDIUHDIUS
-              HDSUIHDUISHU
-              HDSUIHDUISHUsdhsuidhsauidsaud dsaudisahdsa dsahdusia
-              dhsauidhas
-              dhsauidhasdhsaui
-              dhsauidhasdhsauidhsaiu
-              dhsauidhasdhsaiud
-              asdhusaid
-              ashduisa
-              dhsauidhas
+              <div style={{height: '100vh'}}>
+                Oi
+              </div>
             </CardFloatHeader>
           </div>
 

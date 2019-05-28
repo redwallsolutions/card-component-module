@@ -71,7 +71,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @font-face {\n    font-family: Poppins;\n    src: ", ", format(\"TrueType\");\n    font-display: fallback;\n  }\n\n  .card-component-module * {\n    font-family: Poppins, cursive;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .card-component-module {\n    font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif; \n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -81,11 +81,10 @@ function _templateObject() {
 }
 
 import styled, { createGlobalStyle } from 'styled-components';
-import Poppins from './../assets/fonts/Poppins-Regular.ttf';
 import Color from 'color';
 import Theming from 'theming-component-module';
 var theme = Theming.createThemeWithAppearance();
-export var GlobalStyle = createGlobalStyle(_templateObject(), Poppins); // CardVerticalLineComponent
+export var GlobalStyle = createGlobalStyle(_templateObject()); // CardVerticalLineComponent
 
 export var CardVerticalLineWrapper = styled.div(_templateObject2(), function (props) {
   return theme(props).contrast(props);

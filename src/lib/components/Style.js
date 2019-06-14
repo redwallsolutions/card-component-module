@@ -6,7 +6,7 @@ const theme = Theming.createThemeWithAppearance();
 
 export const GlobalStyle = createGlobalStyle `
   .card-component-module {
-    font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif; 
+    font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif;
   }
 `
 
@@ -97,7 +97,7 @@ export const CustomMenuStyles = createGlobalStyle`
   }
 
   li.rc-menu-item {
-  font-family: Poppins, cursive;
+   font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif;
    cursor: pointer !important;
    width: auto !important;
    transition: background-color .3s;

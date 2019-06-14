@@ -41,7 +41,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  .rc-menu-root {\n    padding: 0 !important;\n    margin: 0 !important;\n    cursor: pointer !important;\n    box-shadow: none !important;\n    border: none !important;\n    background: none !important;\n  }\n\n  .rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title {\n    background: none !important;\n  }\n\n  .rc-menu-item-active {\n    background: ", " !important;\n    color: ", " !important;\n  }\n\n  .rc-menu-submenu-selected {\n    background: none !important;\n  }\n\n  .rc-menu-submenu-title {\n    background: none;\n    padding: 0 !important;\n    margin: 0 !important;\n    transition: background-color .3s;\n    border-radius: 3px !important;\n    color: ", "\n  }\n\n  .rc-menu-sub {\n    transform-origin: right top !important;\n    width: 100% !important;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1)!important;\n    background: ", " !important;\n    color: ", " !important;\n  }\n\n  .rc-menu-submenu-arrow::before {\n    content: \"\" !important;\n  }\n\n  li.rc-menu-item {\n  font-family: Poppins, cursive;\n   cursor: pointer !important;\n   width: auto !important;\n   transition: background-color .3s;\n   border: none !important;\n   padding: 8px !important;\n   text-align: center;\n   border-radius: 2px !important;\n  }\n  li.rc-menu-item-selected {\n    background: ", "\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .rc-menu-root {\n    padding: 0 !important;\n    margin: 0 !important;\n    cursor: pointer !important;\n    box-shadow: none !important;\n    border: none !important;\n    background: none !important;\n  }\n\n  .rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title {\n    background: none !important;\n  }\n\n  .rc-menu-item-active {\n    background: ", " !important;\n    color: ", " !important;\n  }\n\n  .rc-menu-submenu-selected {\n    background: none !important;\n  }\n\n  .rc-menu-submenu-title {\n    background: none;\n    padding: 0 !important;\n    margin: 0 !important;\n    transition: background-color .3s;\n    border-radius: 3px !important;\n    color: ", "\n  }\n\n  .rc-menu-sub {\n    transform-origin: right top !important;\n    width: 100% !important;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1)!important;\n    background: ", " !important;\n    color: ", " !important;\n  }\n\n  .rc-menu-submenu-arrow::before {\n    content: \"\" !important;\n  }\n\n  li.rc-menu-item {\n   font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif;\n   cursor: pointer !important;\n   width: auto !important;\n   transition: background-color .3s;\n   border: none !important;\n   padding: 8px !important;\n   text-align: center;\n   border-radius: 2px !important;\n  }\n  li.rc-menu-item-selected {\n    background: ", "\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -71,7 +71,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  .card-component-module {\n    font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif; \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  .card-component-module {\n    font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

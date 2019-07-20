@@ -138,7 +138,7 @@ export const CardFloatHeaderWrapper = styled.div `
   border-radius: 5px;
   background: ${props => Color(theme(props).contrast(props)).string()};
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -2px rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.12);
-  padding: 1em;
+  padding: 1em 0;
   &:hover ${CardFloatHeaderHeader} {
     transform: translate(0, -2%);
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);

@@ -149,16 +149,40 @@ const App: FC = () => {
 					<div style={{ margin: 5 }}>
 						<Card
 							headerText="Some Menu Options"
-							menuOptions={[{
-								text: 'Option One'
-							}, {
-								text: 'Option Two'
-							}, {
-								text: 'Option Three'
-							}]}
+							menuOptions={[
+								{
+									text: 'Option One'
+								},
+								{
+									text: 'Option Two'
+								},
+								{
+									text: 'Option Three'
+								}
+							]}
 						/>
 					</div>
-					
+					<div style={{ margin: 5 }}>
+						<Card
+							supportingText=" "
+							actions={[
+								{
+									text: 'Detais',
+									appearance: 'primary'
+								},
+								{
+									text: 'Other Action',
+									appearance: 'primary',
+									variant: 'contained'
+								}
+							]}
+						/>
+					</div>
+					<div style={{ margin: 5 }}>
+						<Card>
+							<p><strong>It's my children.</strong></p>
+						</Card>
+					</div>
 				</div>
 			</Container>
 		</ThemeProvider>

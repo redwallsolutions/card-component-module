@@ -38,6 +38,7 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
+    "@redwallsolutions/button-component-module": "^1.8.0",
     "@redwallsolutions/common-interfaces-ts": "^1.0.2",
     "@redwallsolutions/dropdown-component-module": "^1.1.1",
     "@redwallsolutions/theming-component-module": "^2.0.2",

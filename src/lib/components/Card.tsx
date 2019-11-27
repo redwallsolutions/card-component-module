@@ -10,11 +10,14 @@ import {
 	Menu,
 	Media,
 	CardBody,
-	SupportingText
+	SupportingText,
+	Actions,
+	ActionContainer
 } from './Style'
 import { More } from '../assets/Icons'
 import Dropdown from '@redwallsolutions/dropdown-component-module'
-import { ICard, ICardStyled } from './interfaces'
+import Button from '@redwallsolutions/button-component-module'
+import { ICard, ICardStyled, Action } from './interfaces'
 import { ThemeContext } from 'styled-components'
 import Ink from 'react-ink'
 
@@ -26,7 +29,8 @@ const Card: FC<ICard & ICardStyled> = ({
 	menuOptions,
 	media,
 	supportingText,
-	...rest
+	children,
+	actions
 }) => {
 	const [MenuVisibility, setMenuVisibility] = useState(false)
 	const documentClickHandler = () => {
@@ -56,19 +60,39 @@ const Card: FC<ICard & ICardStyled> = ({
 						</HeaderTextContainer>
 						{menuOptions && (
 							<Menu onClick={toggleMenuVisibility}>
-								<Ink/>
+								<Ink />
 								<More />
 								<Dropdown visible={MenuVisibility} items={menuOptions} />
 							</Menu>
 						)}
 					</CardHeader>
 				)}
-				{media && <Media src={media} supportingText={supportingText} headerText={headerText}/>}
-				{supportingText && (
+				{media && (
+					<Media
+						src={media}
+						supportingText={supportingText}
+						headerText={headerText}
+					/>
+				)}
+				{(supportingText || children)&& (
 					<CardBody media={media}>
-						<SupportingText>
-							{supportingText}
-						</SupportingText>
+						<SupportingText>{supportingText}</SupportingText>
+						{children}
+						{actions && (
+							<Actions>
+								{actions.map((action: Action, index) => (
+									<ActionContainer key={index}>
+										<Button
+											onClick={action.handler}
+											variant={action.variant || 'text'}
+											appearance={action.appearance}
+										>
+											{action.text}
+										</Button>
+									</ActionContainer>
+								))}
+							</Actions>
+						)}
 					</CardBody>
 				)}
 			</Container>

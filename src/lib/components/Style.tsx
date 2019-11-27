@@ -10,10 +10,10 @@ export const Reset = createGlobalStyle`
   .card-component-module {
     font-family: Arial, Heveltica, Tahoma, Geneva, sans-serif;
     padding: 0;
-    margin: 0
+	margin: 0;
     &, * {
       transition: .2s;
-      box-sizing: border-box; 
+	  box-sizing: border-box; 
     }
   }
 `
@@ -110,6 +110,7 @@ export const Media = styled.div<ImgHTMLAttributes<HTMLImageElement> & ICard>`
 `
 
 export const CardBody = styled.div<ICard>`
+	position: relative;
 	height: 116px;
 	padding: 16px;
 	background-color: #fff;
@@ -124,5 +125,18 @@ export const SupportingText = styled.p`
 	margin: 0;
 	color: #00000099;
 `
-export const Button = styled.button``
+
+export const Actions = styled.div`
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	padding-left: 16px;
+	padding-bottom: 8px;
+`
+
+export const ActionContainer = styled.div`
+	display: inline;
+	margin: 0 4px;
+`
 export const Icon = styled.i``

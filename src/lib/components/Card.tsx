@@ -23,6 +23,7 @@ import Ink from 'react-ink'
 
 const Card: FC<ICard & ICardStyled> = ({
 	theme = { mode: 'light' },
+	appearance = 'default',
 	shouldFitContainer,
 	headerText,
 	subHead,
@@ -50,19 +51,32 @@ const Card: FC<ICard & ICardStyled> = ({
 	return (
 		<div className="card-component-module">
 			<Reset />
-			<Container shouldFitContainer={shouldFitContainer}>
+			<Container
+				shouldFitContainer={shouldFitContainer}
+				theme={themeToApply}
+				appearance={appearance}
+			>
 				{headerText && (
 					<CardHeader media={media}>
 						<Thumbnail />
-						<HeaderTextContainer theme={themeToApply}>
+						<HeaderTextContainer>
 							<HeaderText title={headerText}>{headerText}</HeaderText>
 							<Subhead title={subHead}>{subHead}</Subhead>
 						</HeaderTextContainer>
 						{menuOptions && (
-							<Menu onClick={toggleMenuVisibility}>
+							<Menu
+								onClick={toggleMenuVisibility}
+								theme={themeToApply}
+								appearance={appearance}
+							>
 								<Ink />
 								<More />
-								<Dropdown visible={MenuVisibility} items={menuOptions} />
+								<Dropdown
+									visible={MenuVisibility}
+									items={menuOptions}
+									theme={themeToApply}
+									appearance={appearance}
+								/>
 							</Menu>
 						)}
 					</CardHeader>
@@ -74,9 +88,11 @@ const Card: FC<ICard & ICardStyled> = ({
 						headerText={headerText}
 					/>
 				)}
-				{(supportingText || children)&& (
+				{(supportingText || children || actions) && (
 					<CardBody media={media}>
-						<SupportingText>{supportingText}</SupportingText>
+						{supportingText && (
+							<SupportingText>{supportingText}</SupportingText>
+						)}
 						{children}
 						{actions && (
 							<Actions>
@@ -86,6 +102,7 @@ const Card: FC<ICard & ICardStyled> = ({
 											onClick={action.handler}
 											variant={action.variant || 'text'}
 											appearance={action.appearance}
+											theme={themeToApply}
 										>
 											{action.text}
 										</Button>

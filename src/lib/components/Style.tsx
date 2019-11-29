@@ -3,8 +3,12 @@ import Color from 'color'
 import { createThemeWithAppearance } from '@redwallsolutions/theming-component-module'
 import { ICard, ICardStyled } from './interfaces'
 import { ImgHTMLAttributes } from 'react'
+import { ICommonProps } from '@redwallsolutions/common-interfaces-ts'
 
 const theming = createThemeWithAppearance()
+
+const isLight = (props: ICommonProps) =>
+	props.theme && props.theme.mode === 'light'
 
 export const Reset = createGlobalStyle`
   .card-component-module {
@@ -26,6 +30,14 @@ export const Container = styled.div<ICardStyled>`
 	&:hover {
 		box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
 	}
+	background-color: ${props =>
+		isLight(props)
+			? '#fff'
+			: Color(theming(props).contrast(props))
+					.lighten(0.5)
+					.toString()};
+	color: ${props =>
+		isLight(props) ? 'rgb(100,100,100)' : theming(props).color};
 	cursor: pointer;
 `
 
@@ -34,7 +46,6 @@ export const CardHeader = styled.header<ICard>`
 	border-bottom-left-radius: ${props => (props.media ? 0 : 4)}px;
 	border-bottom-right-radius: ${props => (props.media ? 0 : 4)}px;
 	height: 72px;
-	background-color: white;
 	display: flex;
 	align-items: center;
 	padding-left: 16px;
@@ -70,7 +81,6 @@ export const HeaderText = styled.h1`
 export const Subhead = styled.h2`
 	font-size: 14px;
 	font-weight: lighter;
-	color: gray;
 	letter-spacing: 0.9px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -80,7 +90,7 @@ export const Subhead = styled.h2`
 	padding: 0;
 `
 
-export const Menu = styled.div`
+export const Menu = styled.div<ICommonProps>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -90,11 +100,13 @@ export const Menu = styled.div`
 	height: 40px;
 	border-radius: 50%;
 	cursor: pointer;
+	color: ${props => (isLight(props) ? 'gray' : theming(props).color)};
 	svg * {
-		fill: gray;
+		fill: ${props => (isLight(props) ? 'gray' : theming(props).color)};
 	}
 	&:active {
-		background-color: #d2d2d2;
+		background-color: ${props =>
+			isLight(props) ? Color('gray').lighten(.9).toString() : Color(theming(props).color(props)).darken(.7).toString()};
 	}
 `
 export const Media = styled.div<ImgHTMLAttributes<HTMLImageElement> & ICard>`
@@ -113,7 +125,6 @@ export const CardBody = styled.div<ICard>`
 	position: relative;
 	height: 116px;
 	padding: 16px;
-	background-color: #fff;
 	border-radius: 4px;
 	border-top-left-radius: ${props => (props.media ? 0 : 4)}px;
 	border-top-right-radius: ${props => (props.media ? 0 : 4)}px;
@@ -123,16 +134,17 @@ export const SupportingText = styled.p`
 	line-height: 20px;
 	padding: 0;
 	margin: 0;
-	color: #00000099;
 `
 
 export const Actions = styled.div`
+	display: flex;
+	justify-content: flex-end;
 	position: absolute;
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	padding-left: 16px;
-	padding-bottom: 8px;
+	padding-right: 16px;
+	padding-bottom: 12px;
 `
 
 export const ActionContainer = styled.div`

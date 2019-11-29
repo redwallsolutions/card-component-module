@@ -180,8 +180,24 @@ const App: FC = () => {
 					</div>
 					<div style={{ margin: 5 }}>
 						<Card>
-							<p><strong>It's my children.</strong></p>
+							<p>
+								<strong>It's my children.</strong>
+							</p>
 						</Card>
+					</div>
+					<div style={{ margin: 5 }}>
+						<Card
+							menuOptions={[
+								{ text: 'First Option' },
+								{ text: 'Second Option' },
+								{ text: 'Third Option' }
+							]}
+							headerText="It's a material design card"
+							subHead="Aimed to display important data."
+							media="https://picsum.photos/300"
+							actions={[{text: "Cancel"}, {text: "Save", appearance:"default", variant: "contained"}]}
+							supportingText="You can do anything you want."
+						/>
 					</div>
 				</div>
 			</Container>

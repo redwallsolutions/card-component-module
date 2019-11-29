@@ -1,0 +1,108 @@
+---
+name: Card Componend Module
+route: /
+---
+
+import { useState } from 'react'
+import { Props, Playground } from 'docz'
+import Card from './src/lib'
+
+## Introduction
+
+Card Component is a react component that creates a rounded card based on Material Design style guide.
+
+![demogif](src/lib/assets/demo.gif)
+
+## Instalation
+
+You can install it using `yarn` or `npm`
+
+Using `yarn`:
+
+    yarn add @redwallsolutions/card-component-module
+
+Using `npm`:
+
+    npm install @redwallsolutions/card-component-module
+
+## Props
+
+<Props of={Card} />
+
+## Usage
+
+### Simplest Form
+
+<Playground>
+	<Card>Hello</Card>
+</Playground>
+
+### Header Text
+
+<Playground>
+	<Card headerText="Some Card Header" />
+</Playground>
+
+### Header Text and Sub Head
+
+<Playground>
+	<Card headerText="Awesome Header" subHead="I'm awesome too :)" />
+</Playground>
+
+### Menu Options
+
+<Playground>
+	<Card headerText="I have a menu" menuOptions={[{ text: 'Some Option' }]} />
+</Playground>
+
+### Media
+
+<Playground>
+	<Card headerText="Some Media" media="https://picsum.photos/300" />
+</Playground>
+
+### Supporting Text
+
+<Playground>
+	<Card
+		headerText="Supporting Text"
+		supportingText="A nice supporting text here. It's commonly used to describe some item etc."
+	/>
+</Playground>
+
+### Only Actions
+
+<Playground>
+	<Card
+		actions={[{ text: 'Cancel' }, { text: 'Save', variant: 'contained' }]}
+	/>
+</Playground>
+
+### Complete Card (Dark and Light mode)
+
+<Playground>
+	{
+		() => {
+			const [mode, setMode] = useState('light')
+			return (
+				<div>
+					<Card
+						theme={{mode}}
+						menuOptions={[
+							{ text: 'Dark Mode', handler:() => {setMode('dark')}},
+							{ text: 'Light Mode', handler:() => {setMode('light')}}
+						]}
+						headerText="It's a material design card"
+						subHead="Aimed to display important data."
+						media="https://picsum.photos/300"
+						actions={[
+							{ text: 'Cancel' },
+							{ text: 'Save', appearance: 'default', variant: 'contained' }
+						]}
+						supportingText="You can do anything you want."
+					/>
+				</div>
+			)
+		}
+	}
+</Playground>

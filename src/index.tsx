@@ -182,6 +182,18 @@ const App: FC = () => {
 						<Card>
 							<p>
 								<strong>It's my children.</strong>
+								<article>
+									Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent
+									taciti sociosqu ad litora torquent. Suco de cevadiss deixa as
+									pessoas mais interessantis. Si u mundo tá muito paradis? Toma
+									um mé que o mundo vai girarzis! Delegadis gente finis,
+									bibendum egestas augue arcu ut est. Mussum Ipsum, cacilds
+									vidis litro abertis. Viva Forevis aptent taciti sociosqu ad
+									litora torquent. Suco de cevadiss deixa as pessoas mais
+									interessantis. Si u mundo tá muito paradis? Toma um mé que o
+									mundo vai girarzis! Delegadis gente finis, bibendum egestas
+									augue arcu ut est.
+								</article>
 							</p>
 						</Card>
 					</div>
@@ -195,7 +207,10 @@ const App: FC = () => {
 							headerText="It's a material design card"
 							subHead="Aimed to display important data."
 							media="https://picsum.photos/300"
-							actions={[{text: "Cancel"}, {text: "Save", appearance:"default", variant: "contained"}]}
+							actions={[
+								{ text: 'Cancel' },
+								{ text: 'Save', appearance: 'default', variant: 'contained' }
+							]}
 							supportingText="You can do anything you want."
 						/>
 					</div>

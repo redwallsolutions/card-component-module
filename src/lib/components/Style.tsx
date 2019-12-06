@@ -123,7 +123,7 @@ export const Media = styled.div<ImgHTMLAttributes<HTMLImageElement> & ICard>`
 
 export const CardBody = styled.div<ICard>`
 	position: relative;
-	height: 116px;
+	min-height: 116px;
 	padding: 16px;
 	border-radius: 4px;
 	border-top-left-radius: ${props => (props.media ? 0 : 4)}px;

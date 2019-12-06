@@ -1,5 +1,5 @@
 import { ICommonProps, IAppearance } from '@redwallsolutions/common-interfaces-ts'
-import { MouseEvent } from 'react'
+import { MouseEvent, ReactNode } from 'react'
 import { Variant } from '@redwallsolutions/button-component-module/dist/components/interfaces'
 
 export interface MenuOption {
@@ -18,6 +18,7 @@ export interface ICardStyled extends ICommonProps {
 
 export interface ICard extends ICommonProps {
 	isReady?:boolean
+	thumbnail?:ReactNode
 	headerText?: string
 	subHead?: string
     menuOptions?: MenuOption[]

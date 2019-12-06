@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { createThemeWithAppearance } from '@redwallsolutions/theming-component-module'
 import Card from './lib'
+import {MdArchive} from 'react-icons/md'
 
 const theming = createThemeWithAppearance()
 
@@ -118,6 +119,29 @@ const App: FC = () => {
 					<div style={{ margin: 5 }}>
 						<Card
 							media="https://picsum.photos/300?random=3"
+							headerText="Image Thumbnail."
+							thumbnail={<img src="https://picsum.photos/300?random=12"/>}
+							isReady
+						/>
+					</div>
+					<div style={{ margin: 5 }}>
+						<Card
+							media="https://picsum.photos/300?random=3"
+							headerText="Icon Thumbnail."
+							thumbnail={<MdArchive/>}
+							isReady
+						/>
+					</div>
+					<div style={{ margin: 5 }}>
+						<Card
+							media="https://picsum.photos/300?random=10"
+							headerText="Image Thumbnail."
+							thumbnail={<img src="https://picsum.photos/300?random=11"/>}
+						/>
+					</div>
+					<div style={{ margin: 5 }}>
+						<Card
+							media="https://picsum.photos/300?random=4"
 							headerText="Header and Image"
 							subHead="AWESOMEEE"
 							isReady

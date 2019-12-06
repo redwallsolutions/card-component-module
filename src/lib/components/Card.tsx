@@ -26,6 +26,7 @@ const Card: FC<ICard & ICardStyled> = ({
 	isReady = false,
 	theme = { mode: 'light' },
 	appearance = 'default',
+	thumbnail,
 	shouldFitContainer,
 	headerText,
 	subHead,
@@ -60,7 +61,7 @@ const Card: FC<ICard & ICardStyled> = ({
 			>
 				{headerText && (
 					<CardHeader media={media}>
-						<Thumbnail />
+						{thumbnail && <Thumbnail  appearance={appearance} theme={themeToApply}>{thumbnail}</Thumbnail>}
 						<HeaderTextContainer>
 							<HeaderText title={headerText}>
 								{isReady ? headerText : <Skeleton />}

@@ -52,13 +52,28 @@ export const CardHeader = styled.header<ICard>`
 	position: relative;
 `
 
-export const Thumbnail = styled.i`
+export const Thumbnail = styled.i<ICommonProps>`
 	width: 40px;
 	height: 40px;
 	min-width: 40px;
 	min-height: 40px;
 	border-radius: 50%;
-	background-color: #d2d2d2;
+	background-color: ${props => Color(theming(props).contrast(props)).darken(.1).toString()};
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	* {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	svg {
+		width: 70%;
+		height: 70%;
+	}
 `
 
 export const HeaderTextContainer = styled.div`
@@ -106,7 +121,13 @@ export const Menu = styled.div<ICommonProps>`
 	}
 	&:active {
 		background-color: ${props =>
-			isLight(props) ? Color('gray').lighten(.9).toString() : Color(theming(props).color(props)).darken(.7).toString()};
+			isLight(props)
+				? Color('gray')
+						.lighten(0.9)
+						.toString()
+				: Color(theming(props).color(props))
+						.darken(0.7)
+						.toString()};
 	}
 `
 export const Media = styled.div<ImgHTMLAttributes<HTMLImageElement> & ICard>`

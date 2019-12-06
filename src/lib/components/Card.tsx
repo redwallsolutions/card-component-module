@@ -20,8 +20,10 @@ import Button from '@redwallsolutions/button-component-module'
 import { ICard, ICardStyled, Action } from './interfaces'
 import { ThemeContext } from 'styled-components'
 import Ink from 'react-ink'
+import Skeleton from '@redwallsolutions/skeleton-loader-component-module'
 
 const Card: FC<ICard & ICardStyled> = ({
+	isReady = false,
 	theme = { mode: 'light' },
 	appearance = 'default',
 	shouldFitContainer,
@@ -60,10 +62,14 @@ const Card: FC<ICard & ICardStyled> = ({
 					<CardHeader media={media}>
 						<Thumbnail />
 						<HeaderTextContainer>
-							<HeaderText title={headerText}>{headerText}</HeaderText>
-							<Subhead title={subHead}>{subHead}</Subhead>
+							<HeaderText title={headerText}>
+								{isReady ? headerText : <Skeleton />}
+							</HeaderText>
+							<Subhead title={subHead}>
+								{isReady ? subHead : <Skeleton width={100} />}
+							</Subhead>
 						</HeaderTextContainer>
-						{menuOptions && (
+						{menuOptions && isReady && (
 							<Menu
 								onClick={toggleMenuVisibility}
 								theme={themeToApply}
@@ -91,7 +97,9 @@ const Card: FC<ICard & ICardStyled> = ({
 				{(supportingText || children || actions) && (
 					<CardBody media={media}>
 						{supportingText && (
-							<SupportingText>{supportingText}</SupportingText>
+							<SupportingText>
+								{isReady ? supportingText : <Skeleton />}
+							</SupportingText>
 						)}
 						{children}
 						{actions && (

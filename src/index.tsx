@@ -112,6 +112,7 @@ const App: FC = () => {
 						<Card
 							media="https://picsum.photos/300?random=2"
 							supportingText="I have a supporting text and a image!"
+							isReady
 						/>
 					</div>
 					<div style={{ margin: 5 }}>
@@ -119,24 +120,30 @@ const App: FC = () => {
 							media="https://picsum.photos/300?random=3"
 							headerText="Header and Image"
 							subHead="AWESOMEEE"
+							isReady
 						/>
 					</div>
 					<div style={{ margin: 5 }}>
-						<Card headerText="Only Header Text" />
+						<Card headerText="Only Header Text" isReady />
 					</div>
 					<div style={{ margin: 5 }}>
-						<Card headerText="Long Header Text until it gets ellipsed by passing the max limit allowed." />
+						<Card
+							headerText="Long Header Text until it gets ellipsed by passing the max limit allowed."
+							isReady
+						/>
 					</div>
 					<div style={{ margin: 5 }}>
 						<Card
 							headerText="Header and Subhead"
 							subHead="I'm a subhead! It's awesome."
+							isReady
 						/>
 					</div>
 					<div style={{ margin: 5 }}>
 						<Card
 							headerText="I love coding"
 							subHead="This is a normal subhead"
+							isReady
 						/>
 					</div>
 					<div style={{ margin: 5 }}>
@@ -144,6 +151,7 @@ const App: FC = () => {
 							headerText="Fitting my parent"
 							subHead="shouldFitContainer prop is passed here."
 							shouldFitContainer
+							isReady
 						/>
 					</div>
 					<div style={{ margin: 5 }}>
@@ -160,6 +168,7 @@ const App: FC = () => {
 									text: 'Option Three'
 								}
 							]}
+							isReady
 						/>
 					</div>
 					<div style={{ margin: 5 }}>
@@ -176,25 +185,25 @@ const App: FC = () => {
 									variant: 'contained'
 								}
 							]}
+							isReady
 						/>
 					</div>
 					<div style={{ margin: 5 }}>
 						<Card>
 							<p>
 								<strong>It's my children.</strong>
-								<article>
-									Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent
-									taciti sociosqu ad litora torquent. Suco de cevadiss deixa as
-									pessoas mais interessantis. Si u mundo tá muito paradis? Toma
-									um mé que o mundo vai girarzis! Delegadis gente finis,
-									bibendum egestas augue arcu ut est. Mussum Ipsum, cacilds
-									vidis litro abertis. Viva Forevis aptent taciti sociosqu ad
-									litora torquent. Suco de cevadiss deixa as pessoas mais
-									interessantis. Si u mundo tá muito paradis? Toma um mé que o
-									mundo vai girarzis! Delegadis gente finis, bibendum egestas
-									augue arcu ut est.
-								</article>
 							</p>
+							<article>
+								Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent
+								taciti sociosqu ad litora torquent. Suco de cevadiss deixa as
+								pessoas mais interessantis. Si u mundo tá muito paradis? Toma um
+								mé que o mundo vai girarzis! Delegadis gente finis, bibendum
+								egestas augue arcu ut est. Mussum Ipsum, cacilds vidis litro
+								abertis. Viva Forevis aptent taciti sociosqu ad litora torquent.
+								Suco de cevadiss deixa as pessoas mais interessantis. Si u mundo
+								tá muito paradis? Toma um mé que o mundo vai girarzis! Delegadis
+								gente finis, bibendum egestas augue arcu ut est.
+							</article>
 						</Card>
 					</div>
 					<div style={{ margin: 5 }}>
@@ -207,6 +216,24 @@ const App: FC = () => {
 							headerText="It's a material design card"
 							subHead="Aimed to display important data."
 							media="https://picsum.photos/300"
+							actions={[
+								{ text: 'Cancel' },
+								{ text: 'Save', appearance: 'default', variant: 'contained' }
+							]}
+							supportingText="You can do anything you want."
+							isReady
+						/>
+					</div>
+					<div style={{ margin: 5 }}>
+						<Card
+							menuOptions={[
+								{ text: 'First Option' },
+								{ text: 'Second Option' },
+								{ text: 'Third Option' }
+							]}
+							headerText="It's a material design card"
+							subHead="Aimed to display important data."
+							media="a"
 							actions={[
 								{ text: 'Cancel' },
 								{ text: 'Save', appearance: 'default', variant: 'contained' }

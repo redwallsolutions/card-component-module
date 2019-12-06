@@ -17,6 +17,7 @@ export interface ICardStyled extends ICommonProps {
 }
 
 export interface ICard extends ICommonProps {
+	isReady?:boolean
 	headerText?: string
 	subHead?: string
     menuOptions?: MenuOption[]

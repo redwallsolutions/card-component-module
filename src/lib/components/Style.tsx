@@ -67,7 +67,7 @@ export const HeaderTextContainer = styled.div`
 	flex-direction: column;
 	padding-left: 16px;
 `
-export const HeaderText = styled.h1`
+export const HeaderText = styled.div`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -129,7 +129,7 @@ export const CardBody = styled.div<ICard>`
 	border-top-left-radius: ${props => (props.media ? 0 : 4)}px;
 	border-top-right-radius: ${props => (props.media ? 0 : 4)}px;
 `
-export const SupportingText = styled.p`
+export const SupportingText = styled.article`
 	font-size: 14px;
 	line-height: 20px;
 	padding: 0;

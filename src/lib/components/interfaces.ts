@@ -4,7 +4,8 @@ import { Variant } from '@redwallsolutions/button-component-module/dist/componen
 
 export interface MenuOption {
 	text: string
-	handler?: (event: MouseEvent<HTMLElement>) => void
+	handler?: (event: MouseEvent<HTMLElement>) => void,
+	icon?: ReactNode
 }
 
 export interface Action extends MenuOption {

@@ -121,7 +121,8 @@ const App: FC = () => {
 							media="https://picsum.photos/300?random=3"
 							headerText="Image Thumbnail."
 							thumbnail={<img src="https://picsum.photos/300?random=12"/>}
-							isReady
+							isReady 
+							onClick={() => {console.log("ok")}}
 						/>
 					</div>
 					<div style={{ margin: 5 }}>

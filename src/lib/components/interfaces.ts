@@ -22,8 +22,9 @@ export interface ICard extends ICommonProps {
 	thumbnail?:ReactNode
 	headerText?: string
 	subHead?: string
-    menuOptions?: MenuOption[]
-    media?:string
+  menuOptions?: MenuOption[]
+  media?:string
 	supportingText?:string
 	actions?: Action[]
+	onClick?: () => void
 }

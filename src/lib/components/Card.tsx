@@ -34,7 +34,8 @@ const Card: FC<ICard & ICardStyled> = ({
 	media,
 	supportingText,
 	children,
-	actions
+	actions,
+	onClick
 }) => {
 	const [MenuVisibility, setMenuVisibility] = useState(false)
 	const documentClickHandler = () => {
@@ -58,6 +59,7 @@ const Card: FC<ICard & ICardStyled> = ({
 				shouldFitContainer={shouldFitContainer}
 				theme={themeToApply}
 				appearance={appearance}
+				onClick={onClick}
 			>
 				{headerText && (
 					<CardHeader media={media}>

@@ -12,8 +12,8 @@ const Reset = createGlobalStyle<any>`
 		font-family: Arial, Helvetica, Geneva, Tahoma, sans-serif;
         padding: 0;
         margin: 0;
-        background-color: ${props => theming(props).contrast};
-        color: ${props => theming(props).color};
+        background-color: ${(props) => theming(props).contrast};
+        color: ${(props) => theming(props).color};
         &, * {
             box-sizing: border-box;
             transition: .3s;
@@ -22,7 +22,7 @@ const Reset = createGlobalStyle<any>`
 `;
 
 Reset.defaultProps = {
-  appearance: "default"
+  appearance: "default",
 } as any;
 
 const Container = styled.div`
@@ -103,7 +103,7 @@ const App: FC = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
-            marginTop: "5em"
+            marginTop: "5em",
           }}
         >
           <div style={{ margin: 5 }}>
@@ -194,14 +194,14 @@ const App: FC = () => {
               headerText="Some Menu Options"
               menuOptions={[
                 {
-                  text: "Option One"
+                  text: "Option One",
                 },
                 {
-                  text: "Option Two"
+                  text: "Option Two",
                 },
                 {
-                  text: "Option Three"
-                }
+                  text: "Option Three",
+                },
               ]}
               isReady
             />
@@ -212,13 +212,13 @@ const App: FC = () => {
               actions={[
                 {
                   text: "Detais",
-                  appearance: "primary"
+                  appearance: "primary",
                 },
                 {
                   text: "Other Action",
                   appearance: "primary",
-                  variant: "contained"
-                }
+                  variant: "contained",
+                },
               ]}
               isReady
             />
@@ -246,14 +246,14 @@ const App: FC = () => {
               menuOptions={[
                 { text: "First Option" },
                 { text: "Second Option" },
-                { text: "Third Option" }
+                { text: "Third Option" },
               ]}
               headerText="It's a material design card"
               subHead="Aimed to display important data."
               media="https://picsum.photos/300"
               actions={[
                 { text: "Cancel" },
-                { text: "Save", appearance: "default", variant: "contained" }
+                { text: "Save", appearance: "default", variant: "contained" },
               ]}
               supportingText="You can do anything you want."
               isReady
@@ -264,14 +264,31 @@ const App: FC = () => {
               menuOptions={[
                 { text: "First Option" },
                 { text: "Second Option" },
-                { text: "Third Option" }
+                { text: "Third Option" },
               ]}
               headerText="It's a material design card"
               subHead="Aimed to display important data."
               media="a"
               actions={[
                 { text: "Cancel" },
-                { text: "Save", appearance: "default", variant: "contained" }
+                { text: "Save", appearance: "default", variant: "contained" },
+              ]}
+              supportingText="You can do anything you want."
+            />
+          </div>
+          <div style={{ margin: 5 }}>
+            <Card
+              headerText="Emoji thumbnail"
+              subHead="Aimed to display important data."
+              isReady
+              thumbnail={
+                <span role="img" aria-label="emoji">
+                  🕹️
+                </span>
+              }
+              actions={[
+                { text: "Cancel" },
+                { text: "Save", appearance: "default", variant: "contained" },
               ]}
               supportingText="You can do anything you want."
             />

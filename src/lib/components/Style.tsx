@@ -69,7 +69,11 @@ export const Thumbnail = styled.i<ICommonProps>`
 		width: 100%;
 		height: 100%;
 	}
-
+	span[${`role='img'`}] {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	svg {
 		width: 70%;
 		height: 70%;
